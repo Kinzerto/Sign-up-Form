@@ -1,0 +1,222 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*****************************************************************************************/
+:root {
+    --left-padding: 50px;
+    --padding-top: 40px;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    height: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row wrap; */
+}
+
+form {
+    background-color: rgba(245, 240, 240, 0.966);
+    width: 100%;
+    min-height: 100vh;
+    /* flex-wrap: wrap; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form .container {
+    padding-left: 50px;
+}
+
+.imageContainer {
+    width: 100%;
+    max-width: 600px;
+    background: url(images/one.jpg);
+    background-size: cover;
+    background-color: wheat;
+    position: relative;
+    border: 2px solid red;
+}
+
+.imageContainer .wrap {
+    background: url(images/ini.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.671);
+    min-height: 20vh;
+    width: 100%;
+}
+
+input {
+    width: 300px;
+    border-radius: 5px;
+    /* outline: none;  */
+    border: 1px solid #E5E7EB;
+}
+
+input:user-invalid {
+    border-color: red;
+}
+input:focus{
+    outline-color: blue;
+    /* box-shadow: 0px 0px 10px 0px ; */
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+input:valid {
+    border-color: #596D48;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+form .inputBackground {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.89);
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.2);
+    padding: 30px 0 30px var(--left-padding);
+    position: relative;
+}
+
+form .inputBackground .container {
+    /* width: 50vw; */
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-left: 0;
+}
+
+form .formGroup {
+    display: flex;
+    gap: 60px;
+}
+
+form .form-row {
+    display: flex;
+    /* flex-direction: column; */
+    flex-flow: column wrap;
+}
+
+form header p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: initial;
+    max-inline-size: 75ch;
+    padding-left: var(--left-padding);
+}
+
+.para-newLine {
+    display: block;
+    padding-top: var(--padding-top);
+    /* line-height:; */
+}
+
+form button {
+    margin-top: var(--padding-top);
+    width: fit-content;
+    margin-left: var(--left-padding);
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color:red /*#596D48*/;
+    border-style: none;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: bold;
+}
+form button:active{
+    background-color: #59793ee8;
+    /* margin: 1px 0 0 1px; */
+}
+
+p {
+    padding-left: var(--left-padding);
+    padding-top: var(--padding-top);
+
+}
+
+h1 {
+    margin-top: -20px;
+    font-weight: 500;
+    font-size: 1.9rem;
+    padding: 15px 0;
+}
+
+p a {
+    color: brown;
+    text-decoration: none;
+    font-weight: 700;
+}
